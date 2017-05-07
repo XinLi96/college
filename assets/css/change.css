@@ -1,0 +1,13 @@
+.change_info{
+    text-align: center;
+}
+.change_info input{
+    color: #000;
+    font-weight: 500;
+}
+.sb{
+    /*background: #32c5d2;*/
+    color: #0a628f;
+    width: 80px;
+    border-radius: 4px;
+}
