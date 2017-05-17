@@ -44,5 +44,10 @@ class User_model extends CI_Model
         $query = $this->db->query($sql);
         return $query;
     }
+    public function get_all(){
+        $sql = 'select * from user';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 }
 ?>

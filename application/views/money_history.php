@@ -66,6 +66,7 @@
                                         <th>申请社团</th>
                                         <th>申请人</th>
                                         <th>申请金额</th>
+                                        <th>明细</th>
                                         <th>申请时间</th>
                                         <th>审核结果</th>
                                     </tr>
@@ -77,6 +78,7 @@
                                             <td class="am-text-middle"><?php echo $row->fd_st;?></td>
                                             <td class="am-text-middle"><?php echo $row->user_name;?></td>
                                             <td class="am-text-middle"><?php echo $row->fd_money;?></td>
+                                            <td class="am-text-middle"><?php echo $row->fd_details;?></td>
                                             <td class="am-text-middle"><?php echo $row->fd_date;?></td>
                                             <td class="am-text-middle">
                                                 <?php

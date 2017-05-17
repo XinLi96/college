@@ -17,10 +17,10 @@ class Notice extends CI_Controller{
             echo '发布公告失败';
         }
     }
-    public function message(){
+    public function notice_history(){
         $result = $this->notice_model->get_all();
         $arr['result'] = $result;
-        $this->load->view('message',$arr);
+        $this->load->view('notice_history',$arr);
     }
     public function del_id(){
         $notice_id = $this->input->get('notice_id');

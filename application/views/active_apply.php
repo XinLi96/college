@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>申请</title>
-    <base href="<?php echo site_url();?>">
+    <base href="<?php echo site_url();?>"><!--  设置基本路径 是所有路径由上到下 -->
     <script src="assets/js/echarts.min.js"></script>
     <link rel="stylesheet" href="assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="assets/css/amazeui.datatables.min.css" />

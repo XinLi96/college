@@ -79,26 +79,26 @@
                 </div>';
                     }
                 ?>
-                <?php
-                    if($user_flag == 2){
-                        echo '<div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
-                    <div class="widget widget-purple am-cf">
-                        <div class="widget-statistic-header">
-                            社团总资金
-                        </div>
-                        <div class="widget-statistic-body">
-                            <div class="widget-statistic-value">
-                                ￥1512.3
-                            </div>
-                            <div class="widget-statistic-description">
-
-                            </div>
-                            <span class="widget-statistic-icon am-icon-support"></span>
-                        </div>
-                    </div>
-                </div>';
-                    }
-                ?>
+<!--                --><?php
+//                    if($user_flag == 2){
+//                        echo '<div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
+//                    <div class="widget widget-purple am-cf">
+//                        <div class="widget-statistic-header">
+//                            社团总资金
+//                        </div>
+//                        <div class="widget-statistic-body">
+//                            <div class="widget-statistic-value">
+//                                ￥1512.3
+//                            </div>
+//                            <div class="widget-statistic-description">
+//
+//                            </div>
+//                            <span class="widget-statistic-icon am-icon-support"></span>
+//                        </div>
+//                    </div>
+//                </div>';
+//                    }
+//                ?>
 
             </div>
 

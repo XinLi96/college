@@ -62,10 +62,12 @@
                                 <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
                                     <thead>
                                     <tr>
-                                        <th>文章缩略图</th>
-                                        <th>文章标题</th>
-                                        <th>作者</th>
+                                        <th>商家商标</th>
+                                        <th>商家</th>
+                                        <th>社团</th>
+                                        <th>姓名</th>
                                         <th>时间</th>
+                                        <th>金额</th>
                                         <th>操作</th>
                                     </tr>
                                     </thead>

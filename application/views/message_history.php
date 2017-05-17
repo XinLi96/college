@@ -6,14 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <base href="<?php echo site_url();?>">
-    <meta name="description" content="这是一个 index 页面">
-    <meta name="keywords" content="index">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="assets/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
     <script src="assets/js/echarts.min.js"></script>
     <link rel="stylesheet" href="assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="assets/css/amazeui.datatables.min.css" />
@@ -25,7 +17,7 @@
 <body data-type="widgets">
 <script src="assets/js/theme.js"></script>
 <div class="am-g tpl-g">
-    <?php include('header.php');?>
+   <?php include('header.php');?>
     <!-- 内容区域 -->
     <div class="tpl-content-wrapper">
         <div class="row-content am-cf">
@@ -33,7 +25,7 @@
                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                     <div class="widget am-cf">
                         <div class="widget-head am-cf">
-                            <div class="widget-title  am-cf">申请列表</div>
+                            <div class="widget-title  am-cf">消息列表</div>
 
 
                         </div>
@@ -50,6 +42,7 @@
                             </div>
                             <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                                 <div class="am-form-group tpl-table-list-select">
+
                                 </div>
                             </div>
                             <div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
@@ -62,37 +55,22 @@
                                 <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black " id="example-r">
                                     <thead>
                                     <tr>
-                                        <th>申请目的</th>
-                                        <th>申请细节</th>
-                                        <th>申请社团</th>
-                                        <th>申请人</th>
-                                        <th>所用教室</th>
-                                        <th>申请时间</th>
-                                        <th>审核结果</th>
+                                        <th>收件人</th>
+                                        <th>发送人</th>
+                                        <th>消息内容</th>
+                                        <th>发送时间</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
                                     <?php foreach($result as $row){?>
-                                        <tr class="gradeX">
-                                            <td class="am-text-middle"><?php echo $row->active_name;?></td>
-                                            <td class="am-text-middle"><?php echo $row->active_note;?></td>
-                                            <td class="am-text-middle"><?php echo $row->active_st;?></td>
-                                            <td class="am-text-middle"><?php echo $row->user_name;?></td>
-                                            <td class="am-text-middle"><?php echo $row->active_room;?></td>
-                                            <td class="am-text-middle"><?php echo $row->active_date;?></td>
-                                            <td class="am-text-middle">
-                                                <?php
-                                                if($row->status == 0){
-                                                    echo '正在审核';
-                                                }else if($row->status == 1){
-                                                    echo '审核通过';
-                                                }else if($row->status == 2){
-                                                    echo '审核失败';
-                                                }
-                                                ?>
-                                            </td>
+                                        <tr>
+                                            <th style="color: <?php if($user_name==$row->mess_rec){echo 'red';}?>"><?php echo $row->mess_rec;?></th>
+                                            <th><?php echo $row->mess_post;?></th>
+                                            <th><?php echo $row->mess_con;?></th>
+                                            <th><?php echo $row->mess_time;?></th>
                                         </tr>
                                     <?php }?>
+                                    </thead>
+                                    <tbody>
+
                                     <!-- more data -->
                                     </tbody>
                                 </table>

@@ -24,13 +24,13 @@ class Welcome extends CI_Controller {
 
         $this->load->model('notice_model');
         $result1 = $this->notice_model->get_one();
-        $arr['notice'] = $result1;
+        $arr['notice'] = $result1;//先将公告内容放入$arr中
 
         if($user_flag == 2){//财务部首页待审核数量
             $this->load->model('fd_model');
             $result = $this->fd_model->get_count();
-            $arr['num'] = $result->num;
-            $this->load->view('index',$arr);
+            $arr['num'] = $result->num;//再将待审核数量放入$arr中
+            $this->load->view('index',$arr);//将$arr放进index页面
         }
         if($user_flag == 3){//外联部首页待审核数量
             $this->load->model('con_model');
@@ -71,5 +71,17 @@ class Welcome extends CI_Controller {
     }
     public function post_notice(){
         $this->load->view('post_notice');
+    }
+    public function post_message(){
+        $user_id = $this->session->userdata('user_id');
+        if($user_id){
+            $this->load->model('user_model');
+            $result = $this->user_model->get_all();
+            $arr['result'] = $result;
+            $this->load->view('post_message',$arr);
+        }else{
+            $this->load->view('login.php');
+        }
+
     }
 }

@@ -91,10 +91,33 @@
 
 
             <li class="sidebar-nav-link">
-                <a href="notice/message">
+                <a href="notice/notice_history">
                     <i class="am-icon-wpforms sidebar-nav-link-logo"></i>公告历史
                 </a>
             </li>
+
+            <li class="sidebar-nav-link">
+                <a href="javascript:;" class="sidebar-nav-sub-title">
+                    <i class="am-icon-table sidebar-nav-link-logo"></i>
+                    消息操作
+                    <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                </a>
+                <ul class="sidebar-nav sidebar-nav-sub">
+                    <li class="sidebar-nav-link">
+                        <a href="message/message_history">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 消息列表
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-link">
+                        <a href="Welcome/post_message">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 发送消息
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
             <?php
             $user_flag = $this->session->userdata('user_flag');
             if($user_flag==5){

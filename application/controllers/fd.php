@@ -17,7 +17,7 @@ class Fd extends CI_Controller{
 
         $result = $this->fd_model->post_apply($reason,$time,$user,$money,$details,$user_id,$st,$status);
         if($result){
-            $this->load->view('index.php');
+            redirect('Welcome/index');
         }else{
             echo '申请失败';
         }

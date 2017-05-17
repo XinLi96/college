@@ -33,7 +33,7 @@ class Active_model extends CI_Model
     public function get_by_status(){//部门查看自己已处理的申请
         $sql = 'select * from active where active.status!=0';
         $query = $this->db->query($sql);
-        return $query->result();
+        return $query->result();//查出多行数据（数组形式）
     }
     public function return_apply($active_id,$status){//退回申请
         $sql = 'update active set status='.$status.' where active_id='.$active_id.'';
@@ -43,7 +43,7 @@ class Active_model extends CI_Model
     public function get_count(){//主页面显示待审核的数量
         $sql = 'select count(*) as num from active where active.status=0';
         $query = $this->db->query($sql);
-        return $query->row();
+        return $query->row();//查出一行数据
     }
 }
 ?>
